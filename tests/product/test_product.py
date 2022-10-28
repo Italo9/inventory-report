@@ -4,18 +4,18 @@ from inventory_report.inventory.product import Product
 def test_cria_produto():
     result = Product(
         1,
-        "t",
-        "t",
-        "t",
-        "t",
-        "t",
-        "t",
+        "cadeira",
+        "Target Corporation",
+        "2021-02-18",
+        "2025-09-17",
+        "CR25",
+        "empilhadas",
     )
 
     assert result.id == 1
-    assert result.nome_do_produto == "t"
-    assert result.nome_da_empresa == "t"
-    assert result.data_de_fabricacao == "t"
-    assert result.data_de_validade == "t"
-    assert result.numero_de_serie == "t"
-    assert result.instrucoes_de_armazenamento == "t"
+    assert result.nome_do_produto == "cadeira"
+    assert result.nome_da_empresa == "Target Corporation"
+    assert result.data_de_fabricacao == "2021-02-18"
+    assert result.data_de_validade == "2025-09-17"
+    assert result.numero_de_serie == "CR25"
+    assert result.instrucoes_de_armazenamento == "empilhadas"
