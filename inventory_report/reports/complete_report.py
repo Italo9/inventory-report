@@ -1,6 +1,6 @@
 import datetime
-from reports.simple_report import SimpleReport
 from collections import Counter
+from inventory_report.reports.simple_report import SimpleReport
 
 
 class CompleteReport(SimpleReport):
@@ -22,10 +22,10 @@ class CompleteReport(SimpleReport):
 
         qtd = dict(Counter(qtd_product).most_common(1))
         key_qtd = list(qtd.keys())[0]
-        qtd = dict(Counter(qtd_product))
+        qtd_total = dict(Counter(qtd_product))
         lista = ""
-        for key, value in qtd:
-            lista += f"- {key}: {value}\n"
+        for key, value in qtd_total.items():
+            lista += f"- {str(key)}: {str(value)}\n"
         return (
             f"Data de fabricação mais antiga: {min(data_de_fabricacao)}\n"
             f"Data de validade mais próxima: {min(data_de_validade)}\n"
