@@ -25,11 +25,12 @@ class CompleteReport(SimpleReport):
         qtd_total = dict(Counter(qtd_product))
         lista = ""
         for key, value in qtd_total.items():
-            lista += f"- {str(key)}: {str(value)}\n"
+            lista += f"- {key}: {value}\n"
+
         return (
             f"Data de fabricação mais antiga: {min(data_de_fabricacao)}\n"
             f"Data de validade mais próxima: {min(data_de_validade)}\n"
-            f"Empresa com mais produtos: {key_qtd}"
+            f"Empresa com mais produtos: {key_qtd}\n"
             f"Produtos estocados por empresa:\n"
-            f" { lista }"
+            f"{lista}"
         )
