@@ -19,7 +19,7 @@ class Inventory:
         elif string_path.endswith(".json"):
             with open(string_path) as file:
                 result_products = json.load(file)
-        elif string_path.endswith(".xml"):
+        else:
             with open(string_path, "r", encoding="utf-8") as file:
                 result_products = xmltodict.parse(file.read())["dataset"][
                     "record"
