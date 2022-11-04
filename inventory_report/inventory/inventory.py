@@ -12,7 +12,6 @@ class Inventory:
             result_products = []
             for row in result:
                 result_products.append(row)
-            print(result_products)
         if string_type == "simples":
             return SimpleReport.generate(result_products)
         if string_type == "completo":
